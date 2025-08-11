@@ -2,12 +2,16 @@
 
 # Basictracer Python
 
-A python version of the "BasicTracer" reference implementation for OpenTracing.  
+A python version of the "BasicTracer" reference implementation for OpenTracing.
 
-The `examples/` directory contains a sample of how the BasicTracer 
+The `examples/` directory contains a sample of how the BasicTracer
 implementation could be used to display spans in the console.
 
 ## Development
+
+### Protocol Buffers
+
+This project uses Protocol Buffers for serializing tracing data. The protobuf definition is in the `proto/wire.proto` file. If you need to regenerate the Python code from the proto file, see the instructions in [proto/README.md](./proto/README.md).
 
 ### Tests
 
@@ -19,6 +23,7 @@ make test
 ```
 
 You can use [tox](https://tox.readthedocs.io) to run tests as well.
+
 ```bash
 tox
 ```
@@ -40,4 +45,3 @@ git push
 ## Licensing
 
 [Apache 2.0 License](./LICENSE).
-
